@@ -10,6 +10,7 @@
 
 @interface NetworkAddrModel : NSObject
 
+@property (nonatomic, strong) NSString *interfaceName;
 @property (nonatomic, strong) NSString *addressString;
 @property (nonatomic, strong) NSString *maskString;
 @property (nonatomic, strong) NSString *gatewayString;

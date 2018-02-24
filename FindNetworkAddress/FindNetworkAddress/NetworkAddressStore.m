@@ -32,8 +32,9 @@ char ngate [INET6_ADDRSTRLEN];
 }
 
 - (void)retriveAddressList{
+    // retrieve the current interfaces - returns 0 on success
     success = getifaddrs(&interface);
-    if (success) {
+    if (success == 0) {
         struct ifaddrs *temp_addrs;
         for (temp_addrs = interface; temp_addrs != NULL; temp_addrs = temp_addrs->ifa_next) {
             int ipVersion;
@@ -48,6 +49,11 @@ char ngate [INET6_ADDRSTRLEN];
                 NSLog(@"Unknown version");
                 ipVersion = 0;
             }
+            
+            NetworkAddrModel *newModel = [NetworkAddrModel new];
+            newModel.interfaceName = [NSString stringWithUTF8String:temp_addrs->ifa_name];
+            
+            [interfaceList addObject:newModel];
         }
     }
 }
