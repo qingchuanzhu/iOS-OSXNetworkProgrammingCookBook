@@ -14,6 +14,7 @@
 		3501A0EF2040F26C00BDC272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3501A0ED2040F26C00BDC272 /* LaunchScreen.storyboard */; };
 		3501A0F22040F26C00BDC272 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3501A0F12040F26C00BDC272 /* main.m */; };
 		3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */; };
+		3599A9F120420687007C586E /* NetworkInterfaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9F020420687007C586E /* NetworkInterfaceCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		3501A0F12040F26C00BDC272 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3599A9EC2041F4BE007C586E /* NetworkAddressStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAddressStore.h; sourceTree = "<group>"; };
 		3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkAddressStore.m; sourceTree = "<group>"; };
+		3599A9EF20420687007C586E /* NetworkInterfaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInterfaceCell.h; sourceTree = "<group>"; };
+		3599A9F020420687007C586E /* NetworkInterfaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				3501A0E62040F26C00BDC272 /* ViewController.m */,
 				3599A9EC2041F4BE007C586E /* NetworkAddressStore.h */,
 				3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */,
+				3599A9EF20420687007C586E /* NetworkInterfaceCell.h */,
+				3599A9F020420687007C586E /* NetworkInterfaceCell.m */,
 				3501A0E82040F26C00BDC272 /* Main.storyboard */,
 				3501A0EB2040F26C00BDC272 /* Assets.xcassets */,
 				3501A0ED2040F26C00BDC272 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 				3501A0E72040F26C00BDC272 /* ViewController.m in Sources */,
 				3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */,
 				3501A0F22040F26C00BDC272 /* main.m in Sources */,
+				3599A9F120420687007C586E /* NetworkInterfaceCell.m in Sources */,
 				3501A0E42040F26C00BDC272 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
