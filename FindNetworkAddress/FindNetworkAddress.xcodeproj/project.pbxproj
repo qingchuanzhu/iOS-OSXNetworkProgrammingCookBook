@@ -13,6 +13,7 @@
 		3501A0EC2040F26C00BDC272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3501A0EB2040F26C00BDC272 /* Assets.xcassets */; };
 		3501A0EF2040F26C00BDC272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3501A0ED2040F26C00BDC272 /* LaunchScreen.storyboard */; };
 		3501A0F22040F26C00BDC272 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3501A0F12040F26C00BDC272 /* main.m */; };
+		3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3501A0EE2040F26C00BDC272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3501A0F02040F26C00BDC272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3501A0F12040F26C00BDC272 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3599A9EC2041F4BE007C586E /* NetworkAddressStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAddressStore.h; sourceTree = "<group>"; };
+		3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkAddressStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				3501A0E32040F26C00BDC272 /* AppDelegate.m */,
 				3501A0E52040F26C00BDC272 /* ViewController.h */,
 				3501A0E62040F26C00BDC272 /* ViewController.m */,
+				3599A9EC2041F4BE007C586E /* NetworkAddressStore.h */,
+				3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */,
 				3501A0E82040F26C00BDC272 /* Main.storyboard */,
 				3501A0EB2040F26C00BDC272 /* Assets.xcassets */,
 				3501A0ED2040F26C00BDC272 /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3501A0E72040F26C00BDC272 /* ViewController.m in Sources */,
+				3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */,
 				3501A0F22040F26C00BDC272 /* main.m in Sources */,
 				3501A0E42040F26C00BDC272 /* AppDelegate.m in Sources */,
 			);
