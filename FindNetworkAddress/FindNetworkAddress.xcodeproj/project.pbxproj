@@ -15,6 +15,7 @@
 		3501A0F22040F26C00BDC272 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3501A0F12040F26C00BDC272 /* main.m */; };
 		3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */; };
 		3599A9F120420687007C586E /* NetworkInterfaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9F020420687007C586E /* NetworkInterfaceCell.m */; };
+		3599A9F4204209D5007C586E /* NetworkAddrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9F3204209D5007C586E /* NetworkAddrModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkAddressStore.m; sourceTree = "<group>"; };
 		3599A9EF20420687007C586E /* NetworkInterfaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInterfaceCell.h; sourceTree = "<group>"; };
 		3599A9F020420687007C586E /* NetworkInterfaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceCell.m; sourceTree = "<group>"; };
+		3599A9F2204209D5007C586E /* NetworkAddrModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAddrModel.h; sourceTree = "<group>"; };
+		3599A9F3204209D5007C586E /* NetworkAddrModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkAddrModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				3501A0E62040F26C00BDC272 /* ViewController.m */,
 				3599A9EC2041F4BE007C586E /* NetworkAddressStore.h */,
 				3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */,
+				3599A9F2204209D5007C586E /* NetworkAddrModel.h */,
+				3599A9F3204209D5007C586E /* NetworkAddrModel.m */,
 				3599A9EF20420687007C586E /* NetworkInterfaceCell.h */,
 				3599A9F020420687007C586E /* NetworkInterfaceCell.m */,
 				3501A0E82040F26C00BDC272 /* Main.storyboard */,
@@ -157,6 +162,7 @@
 				3501A0F22040F26C00BDC272 /* main.m in Sources */,
 				3599A9F120420687007C586E /* NetworkInterfaceCell.m in Sources */,
 				3501A0E42040F26C00BDC272 /* AppDelegate.m in Sources */,
+				3599A9F4204209D5007C586E /* NetworkAddrModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

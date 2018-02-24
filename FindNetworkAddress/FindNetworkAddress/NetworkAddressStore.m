@@ -12,6 +12,9 @@
 #include <sys/socket.h>
 
 @implementation NetworkAddressStore
+{
+    NSMutableArray<NetworkAddrModel*> *interfaceList;
+}
 
 struct ifaddrs *interface = NULL;
 int success = 0;
@@ -23,7 +26,7 @@ char ngate [INET6_ADDRSTRLEN];
 - (instancetype)init{
     self = [super init];
     if (self) {
-        
+        interfaceList = [NSMutableArray new];
     }
     return self;
 }
@@ -46,6 +49,15 @@ char ngate [INET6_ADDRSTRLEN];
                 ipVersion = 0;
             }
         }
+    }
+}
+
+- (NSArray<NetworkAddrModel *> *)listOfInterfaceToDisplay{
+    if (interfaceList.count > 0) {
+        return interfaceList;
+    } else {
+        [self retriveAddressList];
+        return interfaceList;
     }
 }
 
