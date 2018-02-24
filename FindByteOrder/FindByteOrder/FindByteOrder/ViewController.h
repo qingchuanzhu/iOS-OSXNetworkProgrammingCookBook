@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+typedef NS_ENUM(NSUInteger, EndianType) {
+    ENDIAN_UNKNOW,
+    ENDIAN_LITTLE,
+    ENDIAN_BIG
+};
 
+@interface ViewController : UIViewController
 
 @end
 
