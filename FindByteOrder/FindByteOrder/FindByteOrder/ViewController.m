@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *resultLabel;
+@property (nonatomic, assign) EndianType endType;
+
 @end
 
 @implementation ViewController
@@ -17,12 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.endType = [self byteOrder];
+    NSString *result = @"";
+    
+    switch (self.endType) {
+        case ENDIAN_LITTLE:
+            result = @"Little";
+            break;
+        case ENDIAN_BIG:
+            result = @"Big";
+            break;
+        default:
+            result = @"unknow";
+            break;
+    }
+    [self.resultLabel setText:result];
 }
 
 - (EndianType)byteOrder{
