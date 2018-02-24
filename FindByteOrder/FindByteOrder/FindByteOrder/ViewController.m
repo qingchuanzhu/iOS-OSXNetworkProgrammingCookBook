@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *resultLabel;
 @property (nonatomic, assign) EndianType endType;
+@property (strong, nonatomic) IBOutlet UILabel *CFresultLabel;
 
 @end
 
@@ -22,6 +23,20 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.endType = [self byteOrder];
     NSString *result = @"";
+    NSString *CFresult = @"";
+    
+    CFByteOrder refOrder = CFByteOrderGetCurrent();
+    switch (refOrder) {
+        case CFByteOrderBigEndian:
+            CFresult = @"Big";
+            break;
+        case CFByteOrderLittleEndian:
+            CFresult = @"Little";
+            break;
+        default:
+            CFresult = @"Unknow";
+            break;
+    }
     
     switch (self.endType) {
         case ENDIAN_LITTLE:
@@ -31,10 +46,11 @@
             result = @"Big";
             break;
         default:
-            result = @"unknow";
+            result = @"Unknow";
             break;
     }
     [self.resultLabel setText:result];
+    [self.CFresultLabel setText:CFresult];
 }
 
 - (EndianType)byteOrder{
