@@ -10,6 +10,7 @@
 #include <ifaddrs.h>
 #include <netdb.h>
 #include <sys/socket.h>
+#include <arpa/inet.h>
 
 @implementation NetworkAddressStore
 {
@@ -49,13 +50,49 @@ char ngate [INET6_ADDRSTRLEN];
                 NSLog(@"Unknown version");
                 ipVersion = 0;
             }
-            
-            NetworkAddrModel *newModel = [NetworkAddrModel new];
-            newModel.interfaceName = [NSString stringWithUTF8String:temp_addrs->ifa_name];
-            
-            [interfaceList addObject:newModel];
+            if (ipVersion != 0) {
+                NetworkAddrModel *newModel = [NetworkAddrModel new];
+                newModel.interfaceName = [NSString stringWithUTF8String:temp_addrs->ifa_name];
+                
+                int len = (ipVersion == AF_INET) ? INET_ADDRSTRLEN : INET6_ADDRSTRLEN;
+                if (ipVersion == AF_INET) {
+                    inet_ntop(ipVersion,&((struct sockaddr_in *)temp_addrs->ifa_addr)->sin_addr,naddr,len);
+                    newModel.addressString = [NSString stringWithUTF8String:naddr];
+                    
+                    if ((struct sockaddr_in *)temp_addrs->ifa_netmask != NULL) {
+                        inet_ntop(ipVersion,&((struct sockaddr_in *)temp_addrs->ifa_netmask)->sin_addr,nmask,len);
+                        newModel.maskString = [NSString stringWithUTF8String:nmask];
+                    } else { newModel.maskString = @" "; }
+                    
+                    if ((struct sockaddr_in *)temp_addrs->ifa_dstaddr != NULL) {
+                        inet_ntop(ipVersion,&((struct sockaddr_in *)temp_addrs->ifa_dstaddr)->sin_addr,ngate,len);
+                        newModel.gatewayString = [NSString stringWithUTF8String:ngate];
+                    } else {newModel.gatewayString = @" "; }
+                    
+                } else if (ipVersion == AF_INET6){
+                    inet_ntop(ipVersion,&((struct sockaddr_in6 *)temp_addrs->ifa_addr)->sin6_addr,naddr,len);
+                    newModel.addressString = [NSString stringWithUTF8String:naddr];
+                    
+                    if ((struct sockaddr_in6 *)temp_addrs->ifa_netmask != NULL) {
+                        inet_ntop(ipVersion,&((struct sockaddr_in6 *)temp_addrs->ifa_netmask)->sin6_addr,nmask,len);
+                        newModel.maskString = [NSString stringWithUTF8String:nmask];
+                    } else { newModel.maskString = @" "; }
+                    
+                    if ((struct sockaddr_in6 *)temp_addrs->ifa_dstaddr != NULL) {
+                        inet_ntop(ipVersion,&((struct sockaddr_in6 *)temp_addrs->ifa_dstaddr)->sin6_addr,ngate,len);
+                        newModel.gatewayString = [NSString stringWithUTF8String:ngate];
+                    } else {newModel.gatewayString = @" "; }
+                    
+                } else {
+                    continue;
+                }
+                
+                
+                [interfaceList addObject:newModel];
+            }
         }
     }
+    freeifaddrs(interface);
 }
 
 - (NSArray<NetworkAddrModel *> *)listOfInterfaceToDisplay{
