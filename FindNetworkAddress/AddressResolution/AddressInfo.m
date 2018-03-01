@@ -10,4 +10,16 @@
 
 @implementation AddressInfo
 
+-(void)addrWithHostname:(NSString*)lHostname Service:(NSString *)lService andHints:(struct addrinfo*)lHints{
+    
+}
+
+-(void)nameWithSockaddr:(struct sockaddr *)saddr{
+    
+}
+
+-(NSString *)errorString{
+    return @"";
+}
+
 @end
