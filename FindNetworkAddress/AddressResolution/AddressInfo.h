@@ -17,8 +17,8 @@
 @property (nonatomic) struct sockaddr *sa;
 @property (nonatomic, readonly) int errorCode;
 
--(void)addrWithHostname:(NSString*)lHostname Service:(NSString *)lService andHints:(struct addrinfo*)lHints;
--(void)nameWithSockaddr:(struct sockaddr *)saddr;
--(NSString *)errorString;
+-(void)addrWithHostname:(NSString*)lHostname Service:(NSString *)lService andHints:(struct addrinfo*)lHints; // used to populate the results property
+-(void)nameWithSockaddr:(struct sockaddr *)saddr; // used to populate hostName and serviceName properties
+-(NSString *)errorString; // return corresponding errorCode
 
 @end
