@@ -16,6 +16,7 @@
 		3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9ED2041F4BE007C586E /* NetworkAddressStore.m */; };
 		3599A9F120420687007C586E /* NetworkInterfaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9F020420687007C586E /* NetworkInterfaceCell.m */; };
 		3599A9F4204209D5007C586E /* NetworkAddrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9F3204209D5007C586E /* NetworkAddrModel.m */; };
+		3599A9F8204889B5007C586E /* AddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3599A9F7204889B5007C586E /* AddressInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		3599A9F020420687007C586E /* NetworkInterfaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceCell.m; sourceTree = "<group>"; };
 		3599A9F2204209D5007C586E /* NetworkAddrModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAddrModel.h; sourceTree = "<group>"; };
 		3599A9F3204209D5007C586E /* NetworkAddrModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkAddrModel.m; sourceTree = "<group>"; };
+		3599A9F6204889B5007C586E /* AddressInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressInfo.h; sourceTree = "<group>"; };
+		3599A9F7204889B5007C586E /* AddressInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 		3501A0D62040F26C00BDC272 = {
 			isa = PBXGroup;
 			children = (
+				3599A9F52048896F007C586E /* AddressResolution */,
 				3501A0E12040F26C00BDC272 /* FindNetworkAddress */,
 				3501A0E02040F26C00BDC272 /* Products */,
 			);
@@ -84,6 +88,15 @@
 				3501A0F12040F26C00BDC272 /* main.m */,
 			);
 			path = FindNetworkAddress;
+			sourceTree = "<group>";
+		};
+		3599A9F52048896F007C586E /* AddressResolution */ = {
+			isa = PBXGroup;
+			children = (
+				3599A9F6204889B5007C586E /* AddressInfo.h */,
+				3599A9F7204889B5007C586E /* AddressInfo.m */,
+			);
+			path = AddressResolution;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +173,7 @@
 				3501A0E72040F26C00BDC272 /* ViewController.m in Sources */,
 				3599A9EE2041F4BE007C586E /* NetworkAddressStore.m in Sources */,
 				3501A0F22040F26C00BDC272 /* main.m in Sources */,
+				3599A9F8204889B5007C586E /* AddressInfo.m in Sources */,
 				3599A9F120420687007C586E /* NetworkInterfaceCell.m in Sources */,
 				3501A0E42040F26C00BDC272 /* AppDelegate.m in Sources */,
 				3599A9F4204209D5007C586E /* NetworkAddrModel.m in Sources */,
